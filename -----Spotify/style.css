@@ -1,0 +1,173 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --primary-color: #1db954;
+    --bgcolor: black;
+    --greycolor:#1f1f1f;
+    --slightgrey:rgb(144, 143, 143);
+    --extragrey: #1f1f1f;
+}
+@font-face {
+    font-family: 'Spotify-UI';
+    src: url(assets/fonts/Spotify-Regular.woff2) format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Spotify-Bold';
+    src: url(assets/fonts/Spotify-Bold.woff2) format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Spotify-Tile';
+    src: url('assets/fonts/Spotify-Tile.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+body{
+    width:100%;
+    height: 100vh;
+    background-color: var(--bgcolor);
+    font-family: 'Spotify-UI';
+    color:var(--greycolor)
+}
+.nav{
+    position: sticky;
+    top:0;
+    height: 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+    width:50%;
+    height: 100%;
+    padding-left:5px;
+}
+.nav-left div:nth-of-type(1){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 64%;
+}
+.nav-left div:nth-of-type(2){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70%;
+    width:7%;
+    background-color: var(--greycolor);
+    border-radius: 50%;
+}
+.nav-left div:nth-of-type(3){
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--greycolor);
+    padding :0 10px;
+    height: 80%;
+    width:70%;
+    border-radius : 40px;
+}
+.nav-left div:nth-of-type(3) input{
+    background-color:transparent;
+    border:0px;
+    padding-left:5px;
+    border-right: 2px  solid var(--slightgrey) ;
+    width: 80%;
+}
+.nav-left div:nth-of-type(3) input::placeholder {
+    color: var(--slightgrey); /* Change this to your desired color */
+    opacity: 1;  /* Optional: ensures full opacity */
+    text-align: left;
+    font-size: 1vw;
+    background: transparent;
+    font-family: 'Spotify-UI','Times New Roman', Times, serif;
+}
+.nav-right{
+    width:40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:var(--slightgrey);
+    font-family: "Spotify-Bold";
+    gap:10px;
+}
+.nav-right div:nth-of-type(4){
+    padding:0 10px 0 8px;
+}
+.nav-right div a {
+    text-decoration: none;
+    color:var(--slightgrey);
+}
+
+.nav-right .install{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    gap:8px;
+    margin: 0 20px;
+}
+.signin {
+    width:100px;
+    height: 70%;
+    background-color: white;
+    border:0px;
+    border-radius : 50px;
+}
+.button{
+    width:100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: white;
+    box-shadow: none;
+    cursor: pointer;
+    color:var(--bgcolor);
+    font-family: "Spotify-Bold";
+    font-size: 16px;
+    font-weight: 600;
+}
+.signin button {
+    width:100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: none;
+    box-shadow: none;
+    cursor: pointer;
+    color:var(--bgcolor);
+    font-family: "Spotify-Bold";
+    font-size: 16px;
+    font-weight: 600;
+}
+.left-section{
+    background-color: var(--extragrey);
+    height:80vh;
+    width:35%;
+    border-radius: 10px;
+    color:white;
+    padding:5px
+}
+.left-section .library{
+    width:100%;
+    background-color:transparent;
+    display: flex;
+    justify-content: space-between;
+    padding : 20px ;
+    height : 20%;
+}
+.library-content{
+    width: 100%;
+    height :60%;
+    background-color: green;
+}

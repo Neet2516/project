@@ -1,0 +1,156 @@
+/* =========================
+   RESPONSIVE FIXES
+========================= */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .hero-con1 {
+        left: 10%;
+        font-size: 28px;
+    }
+
+    .tax {
+        font-size: 40px;
+    }
+
+    .offers-section {
+        flex-wrap: wrap;
+        margin: 4rem 2rem;
+        gap: 2rem;
+        justify-content: center;
+    }
+
+    .card {
+        flex: 1 1 45%;
+        min-width: 280px;
+    }
+
+    .container {
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    .left {
+        max-width: 100%;
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+    .nav {
+        padding: 0 1rem;
+    }
+
+    .nav-main {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        font-size: 12px;
+        width: auto;
+    }
+
+    .hero-con1 {
+        top: 25%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 20px;
+        width: 90%;
+    }
+
+    .tax {
+        font-size: 28px;
+    }
+
+    .order {
+        position: relative;
+        top: 20px;
+        left: 0;
+        transform: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .offers-section {
+        flex-direction: column;
+        margin: 2rem 1rem;
+    }
+
+    .card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .video-banner {
+        margin: 2rem 1rem;
+        height: auto;
+        min-height: 300px;
+    }
+
+    .video-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .btn-group {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .container {
+        flex-direction: column;
+        text-align: center;
+        margin: 1rem;
+    }
+
+    .right {
+        justify-content: center;
+    }
+
+    .panel {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .card-content h2 {
+        font-size: 22px;
+    }
+
+    .card-content p {
+        font-size: 14px;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+}
+
+/* Extra small phones */
+@media (max-width: 480px) {
+    .nav-logo img {
+        width: 80px;
+    }
+
+    .hero-con1 {
+        top: 20%;
+        font-size: 16px;
+    }
+
+    .tax {
+        font-size: 22px;
+    }
+
+    .in {
+        font-size: 14px;
+    }
+
+    .btn, button.primary, button.secondary {
+        font-size: 0.85rem;
+        padding: 8px 12px;
+    }
+
+    .video-content h1 {
+        font-size: 1.2rem;
+    }
+}

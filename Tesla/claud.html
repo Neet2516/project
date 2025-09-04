@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electric Cars,Solar & Clean Energy Tesla</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .nav {
+            height: 3.4rem;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-logo {
+            height: 100%;
+            width: 33%;
+            margin-left: 1.87rem;
+            padding: 1.1rem;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav-main {
+            display: flex;
+            padding: 0rem 0.5rem;
+            width: 33%;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .m {
+            padding: 4px 16px;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .right {
+            display: flex;
+            width: 33%;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0px 32px 0px 0px;
+            font-size: 21px;
+        }
+
+        .ri {
+            margin-right: 4px;
+        }
+
+        .rig {
+            margin-right: 1rem;
+        }
+
+        .cars {
+            max-width: 100%;
+        }
+
+        .hero {
+            position: relative;
+        }
+
+        .img {
+            transform: translateY(-50px);
+            transform: translateY(+0px);
+            width: 100%;
+            height: 630px;
+            overflow: hidden;
+        }
+
+        .hero-con1 {
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translateX(-50%);
+            color: rgb(255, 255, 255);
+            font-size: 34px;
+            text-align: center;
+            justify-content: center;
+            padding: 20px;
+            width: 90%;
+        }
+
+        .tax {
+            font-size: 54px;
+            font-weight: 700;
+        }
+
+        .in {
+            color: white;
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        .order {
+            position: absolute;
+            display: flex;
+            top: 150px;
+            left: 50%;
+            transform: translateX(-50%);
+            gap: 25px;
+            justify-content: center;
+            text-align: center;
+            font-weight: 500;
+            flex-wrap: wrap;
+        }
+
+        .e3 {
+            background-color: #406fe4;
+            padding: 9px 24px;
+            font-size: 15px;
+            border-radius: 4px;
+            height: 39px;
+            width: 13rem;
+            text-align: center;
+            align-items: center;
+        }
+
+        .y {
+            background-color: #406fe4;
+            padding: 9px 24px;
+            border-radius: 7px;
+            font-size: 15px;
+            width: 13rem;
+        }
+
+        .offers-section {
+            display: flex;
+            margin-top: 6%;
+            margin-left: 2.9rem;
+            margin-right: 2.9rem;
+            gap: 5rem;
+            margin-bottom: 6%;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #f5f5f5;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            gap: 2rem;
+            flex: 1;
+        }
+
+        .text-content {
+            flex: 1;
+        }
+
+        .image-content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .image-content img {
+            max-width: 100%;
+            max-height: 200px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .btn {
+            padding: 0.6rem 1.2rem;
+            background-color: black;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 500;
+            display: inline-block;
+        }
+
+        .video-banner {
+            margin: 3rem 4rem;
+            position: relative;
+            height: 600px;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+
+        .bg-video {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+
+        .video-content {
+            position: relative;
+            z-index: 1;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 1rem;
+        }
+
+        .video-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            padding: 0.8rem 1.5rem;
+            border-radius: 6px;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .btn.primary {
+            background-color: #3e6ae1;
+            color: white;
+        }
+
+        .btn.secondary {
+            background-color: white;
+            color: black;
+        }
+
+        .container {
+            margin: 0rem 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            padding: 20px 0;
+        }
+
+        .left {
+            max-width: 60%;
+        }
+
+        .left h1 {
+            font-weight: 900;
+            font-size: 2.5rem;
+            margin: 0 0 8px 0;
+        }
+
+        .left p {
+            color: #666666;
+            margin: 0 0 20px 0;
+            font-size: 1rem;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            font-weight: 600;
+            border-radius: 4px;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn.primary:hover {
+            background-color: #333333;
+        }
+
+        .btn.secondary:hover {
+            background-color: #dddddd;
+        }
+
+        .right {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .charge-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .number {
+            font-weight: 900;
+            font-size: 2.25rem;
+            line-height: 1;
+        }
+
+        .icon {
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .supercharger {
+            background-color: #ff2a2a;
+        }
+
+        .destinationcharger {
+            background-color: #7d7d7d;
+        }
+
+        .label {
+            font-weight: 600;
+            font-size: 1rem;
+            color: #1a1a1a;
+            line-height: 1;
+        }
+
+        .panel {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+            max-width: 100%;
+        }
+
+        .panel .card {
+            position: relative;
+            flex: 1;
+            overflow: hidden;
+            border-radius: 12px;
+            height: 400px;
+        }
+
+        .bg-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .card-content {
+            position: absolute;
+            bottom: 3rem;
+            left: 2.9rem;
+            color: white;
+            z-index: 2;
+        }
+
+        .card-content h2 {
+            margin: 0 0 10px;
+            font-size: 28px;
+        }
+
+        .card-content p {
+            margin: 0 0 20px;
+            font-size: 16px;
+        }
+
+        button.primary {
+            background-color: #3e6ae1;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button.secondary {
+            background-color: white;
+            color: black;
+            border: none;
+            padding: 10px 18px;
+            font-weight: 700;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .footer {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            color: #333;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .footer .disclaimer {
+            max-width: 900px;
+            margin: 0 auto 30px;
+            color: #5c5e62;
+        }
+
+        .footer .disclaimer p {
+            margin: 8px 0;
+            line-height: 1.6;
+        }
+
+        .footer .disclaimer a {
+            color: #393c41;
+            text-decoration: underline;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 13px;
+            color: #5c5e62;
+        }
+
+        .footer-links a {
+            color: #5c5e62;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Mobile Menu Toggle */
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .mobile-menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background-color: #000;
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        /* ===== RESPONSIVE STYLES ===== */
+        
+        /* Tablets and smaller desktops */
+        @media screen and (max-width: 1024px) {
+            .nav-logo {
+                margin-left: 1rem;
+            }
+            
+            .right {
+                padding: 0px 16px 0px 0px;
+            }
+            
+            .video-banner {
+                margin: 2rem;
+            }
+            
+            .container {
+                margin: 0rem 2rem;
+            }
+            
+            .offers-section {
+                margin-left: 2rem;
+                margin-right: 2rem;
+                gap: 3rem;
+            }
+        }
+
+        /* Tablets */
+        @media screen and (max-width: 768px) {
+            /* Navigation */
+            .nav-main {
+                display: none;
+            }
+            
+            .mobile-menu-toggle {
+                display: flex;
+            }
+            
+            .nav-logo {
+                width: 50%;
+                margin-left: 0.5rem;
+            }
+            
+            .right {
+                width: 50%;
+                gap: 0.4rem;
+                font-size: 18px;
+                padding-right: 1rem;
+            }
+            
+            /* Hero Section */
+            .img {
+                height: 500px;
+            }
+            
+            .hero-con1 {
+                top: 25%;
+                width: 95%;
+            }
+            
+            .tax {
+                font-size: 36px;
+            }
+            
+            .in {
+                font-size: 18px;
+            }
+            
+            .order {
+                top: 120px;
+                gap: 15px;
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .e3, .y {
+                width: 11rem;
+                font-size: 14px;
+            }
+            
+            /* Offers Section */
+            .offers-section {
+                flex-direction: column;
+                gap: 2rem;
+                margin-left: 1rem;
+                margin-right: 1rem;
+            }
+            
+            .card {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            /* Video Banner */
+            .video-banner {
+                margin: 2rem 1rem;
+                height: 400px;
+            }
+            
+            .video-content h1 {
+                font-size: 2rem;
+            }
+            
+            .btn-group {
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+            }
+            
+            .btn-group .btn {
+                width: 200px;
+            }
+            
+            /* Container Section */
+            .container {
+                flex-direction: column;
+                gap: 2rem;
+                margin: 0rem 1rem;
+                text-align: center;
+            }
+            
+            .left {
+                max-width: 100%;
+            }
+            
+            .left h1 {
+                font-size: 2rem;
+            }
+            
+            .right {
+                width: 100%;
+                justify-content: center;
+                gap: 20px;
+            }
+            
+            .buttons {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            
+            /* Panel Section */
+            .panel {
+                flex-direction: column;
+                padding: 10px;
+            }
+            
+            .panel .card {
+                height: 350px;
+            }
+            
+            .card-content {
+                bottom: 2rem;
+                left: 2rem;
+            }
+            
+            .card-content h2 {
+                font-size: 24px;
+            }
+        }
+
+        /* Mobile Phones */
+        @media screen and (max-width: 480px) {
+            .nav {
+                height: 3rem;
+            }
+            
+            .nav-logo {
+                padding: 0.8rem;
+            }
+            
+            .nav-logo img {
+                width: 100px;
+            }
+            
+            .right {
+                font-size: 16px;
+                gap: 0.3rem;
+            }
+            
+            /* Hero Section */
+            .img {
+                height: 400px;
+            }
+            
+            .hero-con1 {
+                top: 20%;
+                padding: 10px;
+            }
+            
+            .tax {
+                font-size: 28px;
+                line-height: 1.2;
+            }
+            
+            .in {
+                font-size: 16px;
+            }
+            
+            .order {
+                top: 100px;
+                gap: 10px;
+            }
+            
+            .e3, .y {
+                width: 10rem;
+                font-size: 13px;
+                padding: 8px 16px;
+            }
+            
+            /* Offers Section */
+            .offers-section {
+                margin: 4% 0.5rem 6%;
+            }
+            
+            .card {
+                padding: 1rem;
+                gap: 1rem;
+            }
+            
+            .image-content img {
+                max-height: 150px;
+            }
+            
+            /* Video Banner */
+            .video-banner {
+                margin: 1rem 0.5rem;
+                height: 300px;
+            }
+            
+            .video-content h1 {
+                font-size: 1.5rem;
+            }
+            
+            .btn-group .btn {
+                width: 150px;
+                padding: 0.6rem 1rem;
+                font-size: 0.9rem;
+            }
+            
+            /* Container Section */
+            .container {
+                margin: 0rem 0.5rem;
+            }
+            
+            .left h1 {
+                font-size: 1.8rem;
+            }
+            
+            .left p {
+                font-size: 0.9rem;
+            }
+            
+            .right {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .number {
+                font-size: 1.8rem;
+            }
+            
+            .buttons {
+                flex-direction: column;
+                gap: 8px;
+            }
+            
+            .btn {
+                padding: 8px 16px;
+                font-size: 0.9rem;
+            }
+            
+            /* Panel Section */
+            .panel .card {
+                height: 300px;
+            }
+            
+            .card-content {
+                bottom: 1.5rem;
+                left: 1.5rem;
+            }
+            
+            .card-content h2 {
+                font-size: 20px;
+            }
+            
+            .card-content p {
+                font-size: 14px;
+            }
+            
+            button.primary, button.secondary {
+                padding: 8px 14px;
+                font-size: 13px;
+            }
+            
+            /* Footer */
+            .footer {
+                padding: 20px 10px;
+            }
+            
+            .footer-links {
+                gap: 10px;
+            }
+        }
+
+        /* Very small screens */
+        @media screen and (max-width: 360px) {
+            .tax {
+                font-size: 24px;
+            }
+            
+            .e3, .y {
+                width: 9rem;
+                font-size: 12px;
+            }
+            
+            .video-content h1 {
+                font-size: 1.3rem;
+            }
+            
+            .left h1 {
+                font-size: 1.6rem;
+            }
+            
+            .number {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="nav">
+            <div class="nav-logo">
+                <img width="125px" src="image.svg" alt="Tesla">
+            </div>
+            <div class="nav-main">
+                <p class="m">Vehicles</p>
+                <p class="m">Energy</p>
+                <p class="m">Charging</p>
+                <p class="m">Discover</p>
+                <p class="m">Shop</p>
+            </div>
+            <div class="right">
+                <div class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <i class="fa-solid fa-question ri"></i>
+                <i class="fa-solid fa-earth-americas ri" style="color: #0d0c0c;"></i>
+                <i class="fa-regular fa-circle-user rig"></i>
+            </div>
+        </div>
+    </header>
+    <div class="hero">
+        <div class="img"> 
+            <img class="cars" src="homepage.avif" alt="background">
+        </div>
+        <div class="hero-con1">
+            <p class="tax">$7,500 Federal Tax Credit Ending</p>
+            <p><a class="in" href="">Limited Inventory-Take Delivery Now</a></p>
+            <div class="order">
+                <p class="e3">Order Model 3</p>
+                <p class="y">Order Model Y</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="offers-section">
+        <div class="card">
+            <div class="text-content">
+                <h2>Current Offers</h2>
+                <p style="padding-bottom: 2rem;">Limited inventory. Take delivery today.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+            <div class="image-content">
+                <img src="Current-Offers.avif" alt="Tesla Cars" />
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="text-content">
+                <h2>Lease a Tesla</h2>
+                <p style="padding-bottom: 2rem;">Explore lease pricing for Model 3 and Model Y, starting from $299/mo.</p>
+                <a href="#" class="btn outline">Compare</a>
+            </div>
+            <div class="image-content">
+                <img src="leave.avif" alt="Lease Tesla" />
+            </div>
+        </div>
+    </div>
+
+    <div class="video-banner">
+        <video autoplay muted loop class="bg-video">
+            <source src="https://digitalassets.tesla.com/tesla-contents/video/upload/f_auto,q_auto/Homepage-FSD-Desktop.mp4" />
+            Your browser does not support the video tag.
+        </video>
+
+        <div class="video-content">
+            <h1>Full Self-Driving (Supervised)</h1>
+            <div class="btn-group">
+                <a href="#" class="btn primary">Demo Drive</a>
+                <a href="#" class="btn secondary">Learn More</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="left">
+            <h1>Find Your Charge</h1>
+            <p>View the network of Tesla Superchargers and Destination Chargers available near you.</p>
+            <div class="buttons">
+                <button class="btn primary" style="background-color: black;">View Network</button>
+                <button class="btn secondary">Learn More</button>
+            </div>
+        </div>
+        <div class="right">
+            <div class="charge-info">
+                <div class="number">32,875</div>
+                <div class="icon supercharger">⚡</div>
+                <div class="label">Superchargers</div>
+            </div>
+            <div class="charge-info">
+                <div class="number">10,386</div>
+                <div class="icon destinationcharger">🔌</div>
+                <div class="label">Destination Chargers</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="panel">
+        <div class="card solar">
+            <img src="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-SolarPanels-01-Desktop.jpg" alt="Solar Panels" class="bg-image">
+            <div class="card-content">
+                <h2>Solar Panels</h2>
+                <p>Use Solar Energy to Power Your Home and Charge Your Tesla</p>
+                <div class="buttons">
+                    <button class="primary">Order Now</button>
+                    <button class="secondary">Learn More</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card powerwall">
+            <img src="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Powerwall-01-Desktop.jpg" alt="Powerwall" class="bg-image">
+            <div class="card-content">
+                <h2>Powerwall</h2>
+                <p>Keep Your Lights On During Outages</p>
+                <div class="buttons">
+                    <button class="primary">Order Now</button>
+                    <button class="secondary">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="disclaimer">
+            <p style="font-weight: 500;font-family: Arial, Helvetica, sans-serif;font-size:12px;">$7,500 federal tax credit available to eligible buyers who purchase and take delivery of a
+                qualifying vehicle by September 30, 2025. Leases not eligible. Not all model trims will qualify. MSRP
+                cap of $80,000 for Cybertruck and Model Y; $55,000 for Model 3 applies. Consult a tax professional
+                regarding your personal eligibility.</p>
+            <p style="font-size: 12px; font-family: Arial, Helvetica, sans-serif;">Terms subject to change. <a href="#">Learn more.</a></p>
+        </div>
+
+        <div class="footer-links">
+            <div style="font-size: 12px;font-family: Arial, Helvetica, sans-serif;">Tesla © 2025</div>
+            <a style="font-size: 12px;font-family: Arial, Helvetica, sans-serif;" href="#">Privacy & Legal</a>
+            <a style="font-size: 12px;font-family: Arial, Helvetica, sans-serif;" href="#">Vehicle Recalls</a>
+            <a style="font-size: 12px;font-family: Arial, Helvetica, sans-serif;" href="#">Contact</a>
+            <a style="font-size: 12px;font-family: Arial, Helvetica, sans-serif;" href="#">News</a>
+            <a style="font-size: 12px;font-family: Arial, Helvetica, sans-serif;" href="#">Get Updates</a>
+            <a style="font-size: 12px;font-family: Arial, Helvetica, sans-serif;" href="#">Locations</a>
+            <a style="font-size: 12px;font-family: Arial, Helvetica, sans-serif;" href="#">Learn</a>
+        </div>
+    </div>
+</body>
+
+</html>
